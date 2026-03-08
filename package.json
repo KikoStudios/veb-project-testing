@@ -1,0 +1,11 @@
+{
+  "name": "veb-project-testing",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js 4010",
+    "worker": "node worker.js",
+    "dev": "node server.js"
+  }
+}

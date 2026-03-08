@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "name": "sample-server",
+      "command": "node server.js 4020",
+      "cwd": "C:/Users/hrdyk/Documents/PROJEKTY-MOJE/VEB-THE-UN-RUNTIME/veb-project-testing",
+      "desiredState": "stopped",
+      "autoRestart": true,
+      "restartPolicy": "on-failure",
+      "runOnStartup": false,
+      "env": {
+        "PORT": "4020"
+      },
+      "secrets": {
+        "SAMPLE_SECRET": "demo-secret"
+      }
+    },
+    {
+      "name": "sample-worker",
+      "command": "node worker.js",
+      "cwd": "C:/Users/hrdyk/Documents/PROJEKTY-MOJE/VEB-THE-UN-RUNTIME/veb-project-testing",
+      "desiredState": "stopped",
+      "autoRestart": true,
+      "restartPolicy": "always",
+      "runOnStartup": false,
+      "env": {
+        "WORKER_NAME": "sample-worker"
+      },
+      "secrets": {}
+    }
+  ]
+}
